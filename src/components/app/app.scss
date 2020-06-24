@@ -1,0 +1,9 @@
+@import "~bulma/sass/utilities/_all";
+
+.app-component {
+  margin: 30px auto;
+
+  &.is-fluid {
+    width: $desktop;
+  }
+}
