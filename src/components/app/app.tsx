@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HomeLink from "../header/home-link/home-link";
+import Header from "../header/header/header";
 import './app.scss';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="container is-fluid app-component">
-      <HomeLink/>
+      <Header/>
       <h1 className="is-size-1 has-text-centered">{authorName}</h1>
     </div>
   );
