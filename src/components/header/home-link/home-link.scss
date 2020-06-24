@@ -6,11 +6,11 @@
   font-size: 25px;
   color: $font-color;
   position: relative;
-  top: 0;
+  top: -3px;
   transition: top .3s ease, color .5s ease;
 
   &:hover {
     color: lighten($font-color, 50%);
-    top: 5px;
+    top: 0;
   }
 }
