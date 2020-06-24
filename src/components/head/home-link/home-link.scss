@@ -1,0 +1,16 @@
+@import "~bulma/sass/utilities/_all";
+
+.home-link {
+  $font-color: $black-ter;
+
+  font-size: 25px;
+  color: $font-color;
+  position: relative;
+  top: 0;
+  transition: top .3s ease, color .5s ease;
+
+  &:hover {
+    color: lighten($font-color, 50%);
+    top: 5px;
+  }
+}

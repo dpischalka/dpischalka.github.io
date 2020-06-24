@@ -1,4 +1,6 @@
 import React from 'react';
+
+import HomeLink from "../head/home-link/home-link";
 import './app.scss';
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
 
   return (
     <div className="container">
+      <HomeLink/>
       <h1 className="is-size-1 has-text-centered">{authorName}</h1>
     </div>
   );
