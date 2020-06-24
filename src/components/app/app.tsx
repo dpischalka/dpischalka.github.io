@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HomeLink from "../head/home-link/home-link";
+import HomeLink from "../header/home-link/home-link";
 import './app.scss';
 
 function App() {
