@@ -5,11 +5,11 @@ import './media-link-item.scss';
 import { MediaLinkItemProps } from "../media-links-list";
 
 
-function MediaLinkItem(props: MediaLinkItemProps) {
+function MediaLinkItem({className, title, icon}: MediaLinkItemProps) {
   return (
-    <div className={props.className}>
-      <FontAwesomeIcon icon={props.icon} size="3x"/>
-      <span>{props.title}</span>
+    <div className={className}>
+      <FontAwesomeIcon icon={icon} size="3x"/>
+      <span>{title}</span>
     </div>
   );
 }

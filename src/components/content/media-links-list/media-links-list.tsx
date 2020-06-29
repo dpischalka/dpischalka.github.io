@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import './media-links-list.scss';
 import MediaLinkItem from "./media-link-item/media-link-item";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { IconProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 
 export interface MediaLinkItemProps {
   title: string;
   icon: IconProp;
+  iconSize?: SizeProp;
   className?: string;
 }
 
