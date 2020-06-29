@@ -1,13 +1,15 @@
 import React from 'react';
 
-import HomeLink from '../home-link/home-link';
 import './header.scss';
+import HomeLink from '../home-link/home-link';
+import NavMenu from "../nav-menu/nav-menu";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <HomeLink/>
-    </div>
+      <NavMenu/>
+    </header>
   );
 }
 
