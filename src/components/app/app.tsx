@@ -6,7 +6,7 @@ import Content from "../content/conten";
 
 function App() {
   return (
-    <div className="container is-fluid app-component">
+    <div className="container is-widescreen app-component">
       <Header/>
       <Content/>
     </div>
