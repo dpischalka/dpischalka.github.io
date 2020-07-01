@@ -4,12 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './media-link-item.scss';
 import { MediaLinkItemProps } from "../media-links-list";
 
-
-function MediaLinkItem({className, title, icon}: MediaLinkItemProps) {
+function MediaLinkItem({className, title, icon, href}: MediaLinkItemProps) {
   return (
     <div className={className}>
       <FontAwesomeIcon icon={icon} size="3x"/>
-      <span>{title}</span>
+      {
+        href
+          ? <a href={href} rel="noopener noreferrer" target="_blank">{title}</a>
+          : <span>{title}</span>
+      }
     </div>
   );
 }

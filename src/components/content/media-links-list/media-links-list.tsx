@@ -23,10 +23,10 @@ function MediaLinksList() {
   const [mediaItems] = useState<MediaLinkItemProps[]>(mediaLinksList);
   const mediaLinkItems = mediaItems
     .filter(({icon, title}: MediaLinkItemProps): boolean => Boolean(icon && title))
-    .map(({icon, title, className}: MediaLinkItemProps, index: number) => {
-      className = `media-link-item-${index}`;
+    .map((mediaLinkItemProps: MediaLinkItemProps, index: number) => {
+      mediaLinkItemProps.className = `media-link-item-${index}`;
 
-      return <MediaLinkItem key={index} icon={icon} title={title} className={className}/>
+      return <MediaLinkItem key={index} {...mediaLinkItemProps}/>
     });
 
   return (
