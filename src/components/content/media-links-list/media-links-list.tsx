@@ -24,7 +24,7 @@ function MediaLinksList() {
   const [mediaItems] = useState<MediaLinkItemProps[]>(mediaLinksList);
   const mediaLinkItems = mediaItems
     .filter(({icon, title}: MediaLinkItemProps): boolean => Boolean(icon && title))
-    .map((mediaLinkItemProps: MediaLinkItemProps, index: number) => {
+    .map((mediaLinkItemProps: MediaLinkItemProps, index: number): JSX.Element => {
       mediaLinkItemProps.className = `media-link-item-${index}`;
 
       return <MediaLinkItem key={index} {...mediaLinkItemProps}/>
