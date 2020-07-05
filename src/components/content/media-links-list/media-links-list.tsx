@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-
-import './media-links-list.scss';
-import MediaLinkItem from "./media-link-item/media-link-item";
 import { faGithub, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { IconProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
+
+import './media-links-list.scss';
+import MediaLinkItem from "./media-link-item/media-link-item";
 
 export interface MediaLinkItemProps {
   title: string;
