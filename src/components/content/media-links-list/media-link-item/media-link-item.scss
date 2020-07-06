@@ -1,4 +1,10 @@
+@import "~bulma/sass/utilities/all";
+
 .contact-item {
   margin-right: 30px;
   transition: all .7s ease;
+
+  &-title {
+    color: $grey;
+  }
 }
