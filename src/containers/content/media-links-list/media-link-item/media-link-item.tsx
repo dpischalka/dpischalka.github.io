@@ -6,12 +6,21 @@ import { MediaLinkItemProps } from "../media-links-list";
 
 function MediaLinkItem({className, title, icon, href, iconSize = '3x'}: MediaLinkItemProps) {
   const Icon: JSX.Element = <FontAwesomeIcon className="contact-item-icon" icon={icon} size={iconSize}/>;
-  const Link: JSX.Element = href
-    ? <a href={href} title={title} className="contact-item-title" rel="noopener noreferrer" target="_blank">{Icon}</a>
-    : <span title={title} className="contact-item-title">{Icon}</span>
 
   return (
-    <div className={`contact-item ${className}`}>{Link}</div>
+    href
+      ? (
+        <a className={`contact-item ${className}`} rel="noopener noreferrer" target="_blank" href={href} title={href}>
+          <span className="contact-item-icon">{Icon}</span>
+          <span className="contact-item-title">{title}</span>
+        </a>
+      )
+      : (
+        <div className={`contact-item ${className}`} title={title}>
+          <span className="contact-item-icon">{Icon}</span>
+          <span className="contact-item-title">{title}</span>
+        </div>
+      )
   );
 }
 

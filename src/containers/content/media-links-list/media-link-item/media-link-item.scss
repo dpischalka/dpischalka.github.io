@@ -1,10 +1,43 @@
 @import "~bulma/sass/utilities/all";
 
-.contact-item {
-  margin-right: 30px;
-  transition: all .7s ease;
+$network-colors: (
+  mail: $blue,
+  twitter: $orange,
+  github: $green,
+  linkedIn: $turquoise,
+  medium: $red,
+);
 
+.contact-item {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-right: 30px;
+  color: $grey;
+
+  &-icon {
+    margin-bottom: 5px;
+  }
+
+  &,
+  &-icon,
   &-title {
-    color: $grey;
+    transition: all .7s ease;
+  }
+
+  @each $network, $color in $network-colors {
+    &.#{$network} {
+      color: $color;
+
+      &:hover {
+        .contact-item-icon {
+          opacity: .5;
+        }
+
+        .contact-item-title {
+          opacity: .7;
+        }
+      }
+    }
   }
 }
