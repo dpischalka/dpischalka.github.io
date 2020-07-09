@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { faGithub, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedinIn, faTwitter, faMedium } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { IconProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -16,16 +16,17 @@ export interface MediaLinkItemProps {
 
 function MediaLinksList() {
   const mediaLinksList: MediaLinkItemProps[] = [
-    {title: 'dpischalka@gmail.com', icon: faEnvelope},
-    {title: 'dpischalka', icon: faTwitter, href: 'https://twitter.com/dpischalka'},
-    {title: 'dpischalka', icon: faGithub, href: 'https://github.com/dpischalka'},
-    {title: 'dpischalka', icon: faLinkedinIn, href: 'https://www.linkedin.com/in/dpischalka/'},
+    {title: 'dpischalka@gmail.com', icon: faEnvelope, className: 'mail'},
+    {title: 'dpischalka', icon: faTwitter, href: 'https://twitter.com/dpischalka', className: 'twitter'},
+    {title: 'dpischalka', icon: faGithub, href: 'https://github.com/dpischalka', className: 'github'},
+    {title: 'dpischalka', icon: faLinkedinIn, href: 'https://www.linkedin.com/in/dpischalka/', className: 'linkedIn'},
+    {title: 'dpischalka', icon: faMedium, href: 'https://medium.com/@dpischalka/', className: 'medium'},
   ];
   const [mediaItems] = useState<MediaLinkItemProps[]>(mediaLinksList);
   const mediaLinkItems = mediaItems
     .filter(({icon, title}: MediaLinkItemProps): boolean => Boolean(icon && title))
     .map((mediaLinkItemProps: MediaLinkItemProps, index: number): JSX.Element => {
-      mediaLinkItemProps.className = `media-link-item-${index}`;
+      mediaLinkItemProps.className = `media-link-item-${index} ${mediaLinkItemProps.className}`;
 
       return <MediaLinkItem key={index} {...mediaLinkItemProps}/>
     });
