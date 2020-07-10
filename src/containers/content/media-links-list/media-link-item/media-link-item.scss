@@ -29,7 +29,7 @@ $network-colors: (
     &.#{$network} {
       color: $color;
 
-      &:hover {
+      &.contact-item-link:hover {
         .contact-item-icon {
           opacity: .5;
         }
