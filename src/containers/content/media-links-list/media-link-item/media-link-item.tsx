@@ -10,7 +10,11 @@ function MediaLinkItem({className, title, icon, href, iconSize = '3x'}: MediaLin
   return (
     href
       ? (
-        <a className={`contact-item ${className}`} rel="noopener noreferrer" target="_blank" href={href} title={href}>
+        <a className={`contact-item contact-item-link ${className}`}
+           rel="noopener noreferrer"
+           target="_blank"
+           href={href}
+           title={href}>
           <span className="contact-item-icon">{Icon}</span>
           <span className="contact-item-title">{title}</span>
         </a>
