@@ -5,7 +5,7 @@ import Content from "../content/conten";
 
 function App() {
   return (
-    <div className="container is-widescreen app-component">
+    <div className="app-component">
       <Content/>
     </div>
   );
