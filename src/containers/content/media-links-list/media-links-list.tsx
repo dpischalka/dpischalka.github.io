@@ -26,13 +26,13 @@ function MediaLinksList() {
   const mediaLinkItems = mediaItems
     .filter(({icon, title}: MediaLinkItemProps): boolean => Boolean(icon && title))
     .map((mediaLinkItemProps: MediaLinkItemProps, index: number): JSX.Element => {
-      mediaLinkItemProps.className = `media-link-item-${index} ${mediaLinkItemProps.className}`;
+      mediaLinkItemProps.className = `column media-link-item-${index} ${mediaLinkItemProps.className}`;
 
       return <MediaLinkItem key={index} {...mediaLinkItemProps}/>
     });
 
   return (
-    <div className="media-links-container">{mediaLinkItems}</div>
+    <div className="media-links-container columns is-desktop">{mediaLinkItems}</div>
   )
 }
 

@@ -5,7 +5,7 @@ import Content from "../content/conten";
 
 function App() {
   return (
-    <div className="app-component">
+    <div className="app-component has-text-centered container">
       <Content/>
     </div>
   );
