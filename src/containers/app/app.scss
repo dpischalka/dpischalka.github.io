@@ -3,3 +3,9 @@
 .app-component {
   margin: 50px auto;
 }
+
+@include until($tablet) {
+  .app-component {
+    margin: 20px auto;
+  }
+}

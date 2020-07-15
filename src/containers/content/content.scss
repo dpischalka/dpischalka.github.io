@@ -1,4 +1,4 @@
-@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/_all";
 
 .content-part-title {
   margin-bottom: 25px;
@@ -14,4 +14,15 @@
   margin-bottom: 70px;
   font-size: 15px;
   color: $grey;
+}
+
+@include until($tablet) {
+  .content-part-title {
+    font-size: 2.3rem !important;
+  }
+
+  .content-description,
+  .content-temporary-notification {
+    font-size: 15px;
+  }
 }

@@ -32,7 +32,7 @@ function MediaLinksList() {
     });
 
   return (
-    <div className="media-links-container columns is-desktop">{mediaLinkItems}</div>
+    <div className="media-links-container columns is-gapless">{mediaLinkItems}</div>
   )
 }
 
