@@ -10,11 +10,11 @@ function Content() {
 
   return (
     <main className="content-part container">
-      <div className="is-hidden-mobile">
+      <div className="is-hidden-mobile flex-centred-horizontal">
         <h1 className="is-size-1 content-part-title has-text-centered">{authorName}</h1>
       </div>
 
-      <div className="is-flex-mobile">
+      <div className="is-flex-mobile hidden flex-centred-horizontal">
         <h1 className="is-size-2 content-part-title has-text-centered">{authorName}</h1>
       </div>
 
