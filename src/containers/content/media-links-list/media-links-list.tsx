@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { faGithub, faLinkedinIn, faTwitter, faMedium } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { IconProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 
 import './media-links-list.scss';
 import MediaLinkItem from "./media-link-item/media-link-item";
+import { detectScreenSize } from '../../../utils/screen-sizes';
 
 export interface MediaLinkItemProps {
   title: string;
@@ -15,6 +16,12 @@ export interface MediaLinkItemProps {
 }
 
 function MediaLinksList() {
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      console.log(detectScreenSize(window.innerWidth));
+    });
+  });
+
   const mediaLinksList: MediaLinkItemProps[] = [
     {title: 'dpischalka@gmail.com', icon: faEnvelope, className: 'mail'},
     {title: 'dpischalka', icon: faTwitter, href: 'https://twitter.com/dpischalka', className: 'twitter'},
