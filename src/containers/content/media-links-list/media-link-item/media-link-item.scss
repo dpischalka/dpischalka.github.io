@@ -41,3 +41,9 @@ $network-colors: (
     }
   }
 }
+
+@include mobile() {
+  .contact-item-title {
+    font-size: 13px;
+  }
+}
