@@ -18,7 +18,7 @@ export const screenSizes = {
   [SCREEN_SIZES_NAMES_LIST.FULLHD]: FULLHD,
 };
 
-export function detectScreenSize(screenWidth: number): string {
+export function detectScreenSize(screenWidth: number): SCREEN_SIZES_NAMES_LIST {
   const TABLET: number = screenSizes[SCREEN_SIZES_NAMES_LIST.TABLET];
   const DESKTOP: number = screenSizes[SCREEN_SIZES_NAMES_LIST.DESKTOP];
   const WIDESCREEN: number = screenSizes[SCREEN_SIZES_NAMES_LIST.WIDESCREEN];
