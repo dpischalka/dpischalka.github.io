@@ -5,7 +5,8 @@ import { IconProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 
 import './media-links-list.scss';
 import MediaLinkItem from "./media-link-item/media-link-item";
-import { detectScreenSize } from '../../../utils/screen-sizes';
+import { detectScreenSize, SCREEN_SIZES_NAMES_LIST } from '../../../utils/screen-sizes';
+import { StringMap } from "../../../utils/common";
 
 export interface MediaLinkItemProps {
   title: string;
@@ -16,8 +17,24 @@ export interface MediaLinkItemProps {
 }
 
 function MediaLinksList() {
+  const ICON_SIZES: StringMap<SizeProp> = {
+    [SCREEN_SIZES_NAMES_LIST.TABLET]: '1x',
+    [SCREEN_SIZES_NAMES_LIST.DESKTOP]: '3x',
+    [SCREEN_SIZES_NAMES_LIST.FULLHD]: '3x',
+    [SCREEN_SIZES_NAMES_LIST.WIDESCREEN]: '3x',
+  };
+
   useEffect(() => {
     window.addEventListener('resize', () => {
+      const SCREEN_WIDTH = detectScreenSize(window.innerWidth) ?? null;
+
+      if (SCREEN_WIDTH) {
+        mediaLinksList.map((mediaLinkItemProps: MediaLinkItemProps, index: number): JSX.Element => {
+          mediaLinkItemProps.iconSize = ICON_SIZES[SCREEN_WIDTH];
+
+          return <MediaLinkItem key={index} {...mediaLinkItemProps}/>
+        });
+      }
       console.log(detectScreenSize(window.innerWidth));
     });
   });
