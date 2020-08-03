@@ -17,7 +17,7 @@ export interface MediaLinkItemProps {
 }
 
 const ICON_SIZES: StringMap<SizeProp> = {
-  [SCREEN_SIZES_NAMES_LIST.TABLET]: '2x',
+  [SCREEN_SIZES_NAMES_LIST.TABLET]: '3x',
   [SCREEN_SIZES_NAMES_LIST.DESKTOP]: '3x',
   [SCREEN_SIZES_NAMES_LIST.FULLHD]: '3x',
   [SCREEN_SIZES_NAMES_LIST.WIDESCREEN]: '3x',
@@ -61,7 +61,7 @@ function MediaLinksList() {
   }, [mediaItems]);
 
   return (
-    <div className="media-links-container columns is-gapless">{mediaLinkItems.map(
+    <div className="media-links-container columns is-mobile is-gapless">{mediaLinkItems.map(
       (item: MediaLinkItemProps, index: number): JSX.Element => <MediaLinkItem key={index} {...item}/>
     )}</div>
   )
