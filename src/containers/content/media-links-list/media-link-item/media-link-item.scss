@@ -19,12 +19,6 @@ $network-colors: (
     margin-bottom: 5px;
   }
 
-  &,
-  &-icon,
-  &-title {
-    transition: all .7s ease;
-  }
-
   @each $network, $color in $network-colors {
     &.#{$network} {
       color: $color;
@@ -44,6 +38,7 @@ $network-colors: (
 
 @include mobile() {
   .contact-item-title {
+    display: none;
     font-size: 13px;
   }
 }
