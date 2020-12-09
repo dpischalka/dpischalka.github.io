@@ -39,7 +39,6 @@ function iconSizeChangeHandler(mediaLinksState: MediaLinkItemProps[], mediaLinks
       .filter(({icon, title}: MediaLinkItemProps): boolean => Boolean(icon && title))
       .map((mediaLinkItemProps: MediaLinkItemProps, index: number): MediaLinkItemProps => ({
         ...mediaLinkItemProps,
-        className: `column media-link-item-${index} ${mediaLinkItemProps.className}`,
         iconSize: ICON_SIZES[SCREEN_WIDTH],
       })));
   }
